@@ -21,21 +21,38 @@
 - macOS（需要 `osacompile`、`iconutil`，系统自带）
 - Python 3.10+
 
-## 快速开始
+## 🚀 一键安装
+
+**打开「终端」（按 `Command + 空格` 输入"终端"），把下面整段复制粘贴进去，回车即可自动完成安装：**
+
+```bash
+git clone https://github.com/unim1012-netizen/markdown-converter-macos.git && cd markdown-converter-macos && ./build.sh && cp -R "dist/Markdown 转换器.app" /Applications/
+```
+
+安装完成后：
+
+1. 打开「应用程序」（`Command + Shift + A`），找到 **Markdown 转换器**
+2. 把要转的 PDF / Word / PPT / Excel 文件**直接拖到图标上**松手
+3. 转换好的同名 `.md` 文件自动出现在原文件旁边
+
+> 第一次运行会自动安装 `markitdown` 依赖（含 PDF / Word / PPT / Excel 支持），需要 1-3 分钟，请耐心等待。
+
+## 构建说明（分步）
+
+上面的一行命令等价于：
 
 ```bash
 git clone https://github.com/unim1012-netizen/markdown-converter-macos.git
 cd markdown-converter-macos
 ./build.sh
+cp -R "dist/Markdown 转换器.app" /Applications/
 ```
 
-脚本会自动完成：
+`build.sh` 会自动完成：
 
 1. 检查 / 安装 `markitdown[pdf,docx,pptx,xlsx]`
 2. 编译 AppleScript 拖放应用
 3. 组装转换脚本与图标
-
-构建产物在 `dist/Markdown 转换器.app`，拖到「应用程序」文件夹即可使用。
 
 ## 手动构建（可选）
 
